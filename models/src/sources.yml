@@ -1,0 +1,20 @@
+version: 2
+sources:
+  - name: airbnb
+    schema: raw
+    tables:
+      - name: listings
+        identifier: raw_listings # actual name in the db
+        description: This raw table represents all properties owned by various hosts
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      - name: hosts
+        identifier: raw_hosts
+        description: This raw table represents all property owners and their details
+      - name: reviews
+        identifier: raw_reviews
+        description: This raw table represents all property reviews. Can be used for
+          sentimental analysis using AI
