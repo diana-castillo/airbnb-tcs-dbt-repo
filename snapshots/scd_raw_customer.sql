@@ -1,3 +1,4 @@
+{#
 {% snapshot scd_raw_customer %}
 
 {{
@@ -13,3 +14,4 @@
 select * FROM AIRBNB.RAW.RAW_CUSTOMER
 
 {% endsnapshot %}
+#}
