@@ -33,3 +33,7 @@ jobs:
     - name: Run all models
       run: |
         dbt run --target prod
+
+    - name: Run all snapshots
+      run: |
+        dbt snapshot --target prod
